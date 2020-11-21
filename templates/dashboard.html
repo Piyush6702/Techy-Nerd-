@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('    {{ url_for('static', filename='img/Admin-bg.jpg') }} ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <!-- <h1>Admin Panel</h1> -->
+            <span class="subheading">You're in Dashboard Now!</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+          <h1> BASIC ACTIONS </h1>
+
+          <a href="/edit/0"><button class="btn btn-primary" > Add New Post</button></a>
+          <a href="/logout"><button class="btn btn-primary" > Logout</button></a>
+          <hr>
+          <h1> Upload File </h1>
+            <form action="/uploader" method="post" enctype="multipart/form-data">
+            <input type="File" name="file1">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          <hr>   
+
+      <h1>Edit Post</h1>       
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sno</th>
+                    <th>Title</th>
+                    <th>Date</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            {% for post in posts %} 
+
+              <tr>
+                <td>{{post.SNo}}</td>
+                <td>{{post.Title}}</td>
+                <td>{{post.Date}}</td>
+                <td><a href="/edit/{{post.SNo}}"><button class="btn btn-primary"> Edit</button></a> </td>
+                <td><a href="/delete/{{post.SNo}}"><button class="btn btn-primary"> Delete</button></a></td>
+              </tr>
+            {% endfor %}
+
+          </tbody>
+      </table>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

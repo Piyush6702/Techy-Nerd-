@@ -1,0 +1,25 @@
+
+{
+  "Params":
+  {
+    "local_server": "True",
+    "local_id": "mysql://root:@localhost/tech blogs",
+    "Prod_id": "mysql://root:@localhost/tech blogs",
+    "fb_url": "https://facebook.com/tech_blogs",
+    "tw_url": "https://twitter.com/tech_blogs",
+    "gt_url": "https://github.com/tech_blogs",
+    "blog_name": "Techy nerd! ",
+    "blog_subtitle": "A blog liked by nerds",
+    "user_mail": "example@gmail.com",
+    "user_password" : "password",
+    "About_me": "Hi my name is Piyush Singh & I am doing my  Bachelors in  Computer Science from BIET Jhansi , Uttar Pradesh.",
+    "no_of_post": 3,
+    "icon_file": "icon.png",
+    "admin_id": "admin@gmail.com",
+    "admin_password": "admin_password",
+    "upload_location": "C:\\Users\\Piyush Singh\\PycharmProject\\Flask_Tut\\static"
+
+
+  }
+
+}
