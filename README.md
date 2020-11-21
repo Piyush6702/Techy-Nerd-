@@ -6,3 +6,4 @@
     3) Contact Form to send any query to the admin
 
 
+### Have a look here https://github.com/Piyush6702/Techy-Nerd-/issues/1#issue-748042186
